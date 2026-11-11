@@ -1,0 +1,13 @@
+body { width: 290px; margin: 0; padding: 14px; font: 13px -apple-system, "SF Pro Text", system-ui, sans-serif;
+  color: #fff; background: linear-gradient(135deg, #2b1236, #151a3a 60%, #3a1220); }
+h1 { font-size: 16px; margin: 0 0 10px; }
+.row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; }
+.col { display: flex; flex-direction: column; gap: 4px; padding: 6px 0; }
+.col span { display: flex; justify-content: space-between; }
+b { opacity: .7; font-weight: 500; }
+input[type=range] { width: 100%; accent-color: #fa586a; }
+textarea { width: 100%; box-sizing: border-box; border-radius: 10px; border: 1px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.1); color: #fff; padding: 6px; font: 12px ui-monospace, monospace; resize: vertical; }
+button { margin-top: 8px; width: 100%; padding: 8px; border-radius: 12px; color: #fff; cursor: pointer;
+  border: 1px solid rgba(255,255,255,.3); background: linear-gradient(135deg, rgba(255,255,255,.25), rgba(255,255,255,.08)); }
+button:hover { background: rgba(255,255,255,.28); }

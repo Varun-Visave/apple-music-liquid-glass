@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "Liquid Glass for Apple Music",
+  "version": "1.2.1",
+  "description": "Gives the Apple Music web app an Apple-style Liquid Glass look: layered blur, specular highlights, glass rims and cursor-reactive sheen.",
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://music.apple.com/*",
+        "https://beta.music.apple.com/*",
+        "https://classical.music.apple.com/*"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "styles.css"
+      ],
+      "matches": [
+        "https://*.music.apple.com/*",
+        "https://music.apple.com/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "Liquid Glass settings",
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/icon.svg"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "liquid-glass@varunvisave.dev",
+      "strict_min_version": "115.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
+}
